@@ -8,10 +8,22 @@ namespace DotNetMvc5Example.Models
 {
     public class DeepWorker
     {
-        public DeepWorker(WorkerProcess w){
-            
+        Repo _repo;
+
+        public DeepWorker(WorkerProcess w, Repo repo){
+            _repo = repo;
             w.doIt();
             System.Diagnostics.Debug.WriteLine("DeepWorker made");
         }
+
+        public void doIt()
+        {
+
+            System.Diagnostics.Debug.WriteLine("Deep do it " + _repo.getStuff());
+
+
+
+        }
+
     }
 }

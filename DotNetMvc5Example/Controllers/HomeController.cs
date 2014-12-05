@@ -63,9 +63,11 @@ namespace DotNetMvc5Example.Controllers
             return View();
         }
 
-        public ActionResult About(WorkerProcess process)
+        public ActionResult About(int? id, WorkerProcess process, DeepWorker deep, DeepWorker deep2)
         {
             ViewBag.Message = "Your application description page.";
+
+            deep2.doIt();
 
             return View();
         }
