@@ -57,3 +57,5 @@ C:\Users\scott\Documents\Projects\Resources\DotNetMvc5Example\DotNetMvc5Example\
 C:\Users\scott\Documents\Projects\Resources\DotNetMvc5Example\DotNetMvc5Example\obj\Debug\DotNetMvc5Example.csprojResolveAssemblyReference.cache
 C:\Users\scott\Documents\Projects\Resources\DotNetMvc5Example\DotNetMvc5Example\obj\Debug\DotNetMvc5Example.dll
 C:\Users\scott\Documents\Projects\Resources\DotNetMvc5Example\DotNetMvc5Example\obj\Debug\DotNetMvc5Example.pdb
+C:\Users\scott\Documents\Projects\Resources\DotNetMvc5Example\DotNetMvc5Example\bin\AWSSDK.dll
+C:\Users\scott\Documents\Projects\Resources\DotNetMvc5Example\DotNetMvc5Example\bin\AWSSDK.pdb

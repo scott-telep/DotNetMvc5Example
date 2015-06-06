@@ -39,7 +39,11 @@ namespace DotNetMvc5Example
 
             builder.RegisterType<Repo>().InstancePerRequest();
             builder.RegisterType<WorkerProcess>();
-            builder.RegisterType<DeepWorker>().InstancePerRequest();
+            builder.RegisterType<DeepWorker>().InstancePerRequest().PropertiesAutowired();
+
+            builder.RegisterType<LoggedUser>().InstancePerRequest();
+
+            builder.RegisterType<PropertyWorker>().PropertiesAutowired();
 
             container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

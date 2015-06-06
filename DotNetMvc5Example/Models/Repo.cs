@@ -14,7 +14,7 @@ namespace DotNetMvc5Example.Models
 
         public string getStuff()
         {
-            return "This is stuff";
+            return "This is stuff from the repo";
         }
     }
 }
