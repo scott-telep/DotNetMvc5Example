@@ -31,4 +31,21 @@ namespace DotNetMvc5Example.Models
             _repo = _repo ?? repo;
         }
     }
+
+
+    public class PropertyWorker
+    {
+        public Repo _repo {get;set;}
+
+        public PropertyWorker()
+        {
+
+        }
+
+        public void testPropInjection()
+        {
+            System.Diagnostics.Debug.WriteLine(_repo.getStuff());
+
+        }
+    }
 }

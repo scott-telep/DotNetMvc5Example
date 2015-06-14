@@ -43,9 +43,11 @@ namespace DotNetMvc5Example
                 var dep = e.Context.Resolve<Repo>();
                 e.Instance.SetTheDependency(dep);
             }); ;
-            builder.RegisterType<DeepWorker>().InstancePerRequest();
+            builder.RegisterType<DeepWorker>().InstancePerRequest().PropertiesAutowired();
 
+            builder.RegisterType<LoggedUser>().InstancePerRequest();
 
+            builder.RegisterType<PropertyWorker>().PropertiesAutowired();
 
             container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
