@@ -76,6 +76,8 @@ namespace DotNetMvc5Example.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            var worker = new WorkerProcess();
+
             return View();
         }
     }

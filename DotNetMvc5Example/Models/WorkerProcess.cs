@@ -9,6 +9,11 @@ namespace DotNetMvc5Example.Models
     {
         Repo _repo;
 
+        public WorkerProcess()
+        {
+
+        }
+
         public WorkerProcess(Repo repo)
         {
             _repo = repo;
@@ -19,6 +24,11 @@ namespace DotNetMvc5Example.Models
         {
             System.Diagnostics.Debug.WriteLine(_repo.getStuff());
 
+        }
+
+        public void SetTheDependency(Repo repo)
+        {
+            _repo = _repo ?? repo;
         }
     }
 }

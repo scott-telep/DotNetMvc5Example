@@ -38,8 +38,14 @@ namespace DotNetMvc5Example
             builder.RegisterModule<AutofacWebTypesModule>();
 
             builder.RegisterType<Repo>().InstancePerRequest();
-            builder.RegisterType<WorkerProcess>();
+            builder.RegisterType<WorkerProcess>().OnActivating(e =>
+            {
+                var dep = e.Context.Resolve<Repo>();
+                e.Instance.SetTheDependency(dep);
+            }); ;
             builder.RegisterType<DeepWorker>().InstancePerRequest();
+
+
 
             container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
