@@ -91,9 +91,13 @@ namespace DotNetMvc5Example.Controllers
         public ActionResult TestDelayedAction(int? id)
         {
             System.Threading.Thread.Sleep(1000 * 10);
-
+            /*
+            var i = 0;
+            var test = 1 / i;
+            */
             return Content("Here is the page finally");
         }
+
 
         public ActionResult TestBucket(int? id)
         {
